@@ -25,7 +25,7 @@ python3 nnet.py --i generated.txt
 
 # Theory
 
-We have implemented the SVM based classification of ATP binding residues from the available dataset at:http://webs.iiitd.edu.in/raghava/atpint/atpdataset.
+We have implemented the SVM based classification of ATP binding residues from the available dataset at: http://webs.iiitd.edu.in/raghava/atpint/atpdataset.
 
 For each window size in the range [7,25], first, the script loads the amino acid sequences from the ATP
 dataset given.
