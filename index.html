@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<script src="https://use.fontawesome.com/d2841419b8.js"></script>
+	<title >BIO 542 : Machine Learning for Biomedical Applications</title>
+<style>
+	body {
+		background-color: #e9ff96;
+	}
+	h2 {
+		font-family: 'Ubuntu', sans-serif;
+	}
+	h3 {
+		font-family: 'Ubuntu', sans-serif;	
+	}
+	.tabs{
+    width: 600px;
+    display: block;
+    margin: 40px auto;
+    position: relative;
+	}
+
+	.tabs .tab{
+	    float: left;
+	    display: block;
+	}
+	.tabs .tab>input[type="radio"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+	}
+
+	.tabs .tab>label {
+    display: block;
+    font-family: 'Spectral SC', serif;
+    padding: 6px 21px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+	}
+
+.tabs .content {
+    z-index: 0;/* or display: none; */
+    overflow: hidden;
+    width: 85%;
+    padding: 25px;
+    position: absolute;
+    top: 33px;
+    left: 0;
+    background: #e9ff96;
+
+    
+    opacity:0;
+    transition: opacity 400ms ease-out;
+	}
+
+	.tabs>.tab>[id^="tab"]:checked + label {
+    top: 0;
+    background: #303030;
+    color: #F5F5F5;
+	}
+
+	.tabs>.tab>[id^="tab"]:checked ~ [id^="tab-content"] {
+	    z-index: 1;/* or display: block; */
+	   
+	    opacity: 1;
+	    transition: opacity 1500ms ease-out;
+	}
+	
+</style>
+</head>
+<body>
+	<center><p> <h3> <u>BIO 542 : Machine Learning for Biomedical Applications, Monsoon Semester 2017, IIIT - Delhi </p> </h3> </u></center>
+	<br>
+	<center><p><h2> <u> Implementation of Improvement on Identification of ATP Binding
+Residues of Proteins from Primary Sequence </u></h2></p></center>
+	<br>
+	<br>
+	<div style="width:100%;"> 
+		<div style="float:left; width:45%; margin-left: 0.5cm; border: 1px solid black;">
+			<ul class="tabs">
+    
+			    <li class="tab">
+			        <input type="radio" name="tabs" checked="checked" id="tab1" />
+			        <label for="tab1" style="font-family: 'Work Sans', sans-serif; font-size: 14px;">SVM</label>
+			        <div id="tab-content1" class="content">
+
+			        		<h3> <u>Results </u></h3>
+			        		<table style="width:100%; font-family: 'Work Sans', sans-serif; font-size: 14px;">
+							  <tr>
+							    <th>Window Size</th>
+							    <th>Accuracy</th> 
+							    <th>Precision</th>
+							    <th>Recall</th>
+							    <th>Specificity</th>
+							    <th>Fscore</th>
+							    <th>MCC</th>
+							    <th>FPR</th>
+							  </tr>
+							  <tr>
+							    <td align="center">16</td>
+							    <td align="center">0.6726</td>
+							    <td align="center">0.6829</td>
+							    <td align="center">0.6447</td>
+							    <td align="center">0.7006</td>
+							    <td align="center">0.6632</td>
+							    <td align="center">0.3459</td>
+							    <td align="center">0.2993</td>
+							  </tr>
+							  <tr>
+							    <td align="center">17</td>
+							    <td align="center">0.6856</td>
+							    <td align="center">0.7001</td>
+							    <td align="center">0.6495</td>
+							    <td align="center">0.7218</td>
+							    <td align="center">0.6739</td>
+							    <td align="center">0.3723</td>
+							    <td align="center">0.2781</td>
+							  </tr>
+							  <tr>
+							    <td align="center">18</td>
+							    <td align="center">0.6870</td>
+							    <td align="center">0.7056</td>
+							    <td align="center">0.6417</td>
+							    <td align="center">0.7322</td>
+							    <td align="center">0.6721</td>
+							    <td align="center">0.3756</td>
+							    <td align="center">0.2677</td>
+							  </tr>
+							  <tr>
+							    <td align="center">19</td>
+							    <td align="center">0.6794</td>
+							    <td align="center">0.6969</td>
+							    <td align="center">0.6348</td>
+							    <td align="center">0.7239</td>
+							    <td align="center">0.6644</td>
+							    <td align="center">0.3147</td>
+							    <td align="center">0.3164</td>
+							  </tr>
+							  <tr>
+							    <td align="center">20</td>
+							    <td align="center">0.6898</td>
+							    <td align="center">0.7057</td>
+							    <td align="center">0.6513</td>
+							    <td align="center">0.7284</td>
+							    <td align="center">0.6774</td>
+							    <td align="center">0.3576</td>
+							    <td align="center">0.2913</td>
+							  </tr>
+							  <tr>
+							    <td align="center">21</td>
+							    <td align="center">0.6870</td>
+							    <td align="center">0.7083</td>
+							    <td align="center">0.6357</td>
+							    <td align="center">0.7382</td>
+							    <td align="center">0.6701</td>
+							    <td align="center">0.3459</td>
+							    <td align="center">0.2993</td>
+							  </tr>
+							  <tr>
+							    <td align="center">22</td>
+							    <td align="center">0.6861</td>
+							    <td align="center">0.7075</td>
+							    <td align="center">0.6345</td>
+							    <td align="center">0.7376</td>
+							    <td align="center">0.6690</td>
+							    <td align="center">0.3742</td>
+							    <td align="center">0.2699</td>
+							  </tr>
+							  <tr>
+							    <td align="center">23</td>
+							    <td align="center">0.6719</td>
+							    <td align="center">0.6802</td>
+							    <td align="center">0.6238</td>
+							    <td align="center">0.7200</td>
+							    <td align="center">0.6657</td>
+							    <td align="center">0.3742</td>
+							    <td align="center">0.2617</td>
+							  </tr>
+							  <tr class="border">
+							    <td style = "border: 1px solid red;" align="center">24</td>
+							    <td style = "border: 1px solid red;" align="center">0.6958</td>
+							    <td align="center">0.7162</td>
+							    <td align="center">0.6486</td>
+							    <td align="center">0.7430</td>
+							    <td align="center">0.6887</td>
+							    <td style = "border: 1px solid red;" align="center">0.3934</td>
+							    <td style = "border: 1px solid red;" align="center">0.2569</td>
+							  </tr>
+							</table>
+			        </div>
+			    </li>
+
+
+			    <li class="tab">
+			      <input type="radio" name="tabs" id="tab2" />
+			      <label for="tab2" style="font-family: 'Work Sans', sans-serif; font-size: 14px;">Neural Network</label>   
+				      <div id="tab-content2" class="content">
+				          <h3> <u>Results </u></h3>
+			        		<table style="width:100%; font-family: 'Work Sans', sans-serif; font-size: 14px;">
+							  <tr>
+							    <th>Window Size</th>
+							    <th>Validation Loss</th> 
+							    <th>Validation Accuracy</th>
+							  </tr>
+							  
+							  <tr>
+							    <td align="center">16</td>
+							    <td align="center">1.9900</td>
+							    <td align="center">0.4673</td>
+							  </tr>
+
+							  <tr>
+							    <td align="center">17</td>
+							    <td align="center">2.4828</td>
+							    <td align="center">0.4733</td>
+							  </tr>
+							  
+							  <tr>
+							    <td align="center">18</td>
+							    <td align="center">2.4199</td>
+							    <td align="center">0.4665</td>
+							  </tr>
+							  <tr>
+							    <td align="center">19</td>
+							    <td align="center">2.6093</td>
+							    <td align="center">0.4710</td>
+							  </tr>
+							  <tr>
+							    <td align="center">20</td>
+							    <td align="center">2.6340</td>
+							    <td align="center">0.4665</td>
+							  </tr>
+							  <tr>
+							    <td align="center">21</td>
+							    <td align="center">2.9711</td>
+							    <td align="center">0.4733</td>
+							  </tr>
+							  <tr>
+							    <td align="center">22</td>
+							    <td align="center">2.9295</td>
+							    <td align="center">0.4628</td>
+							  </tr>
+							  <tr>
+							    <td style = "border: 1px solid red;" align="center">23</td>
+							    <td align="center">3.0979</td>
+							    <td style = "border: 1px solid red;" align="center">0.4816</td>
+							  </tr>
+							  <tr>
+							    <td align="center">24</td>
+							    <td align="center">3.3554</td>
+							    <td align="center">0.4695</td>
+							  </tr>
+							</table>	
+				      </div>
+			    </li>
+			</ul>
+		</div>
+		<div style="float:right; width:50%; border: 1px solid black; margin-right: 1cm;">
+			<center><h3> Project Details </h3></center>
+			<div style="margin-left: 0.5cm; font-family: 'Work Sans', sans-serif;"> We have carried out a brief 	implementation of the paper
+<a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-434">“Identification of ATP binding residues of a protein from
+its primary sequence”</a> and attempted to improve on the existing
+methods by using different machine learning techniques using
+an extended dataset and optimized parameters on the models. 
+			<br>
+			We first tried a simple implementation of the paper using
+the linked dataset on Python, using the scikit-learn library and
+the svm SVC module, and carried it out on different window
+sizes.
+			<br>
+			We obtained maximum cross-validation accuracies of
+around 64% on a balanced dataset, with window size 17.
+			<br>
+			We extracted 63 more non - redundant ATP Binding protiens and applied SVM and Neural Network. However, the neural network failed to give a comparable
+accuracy (around 50%) but we managed to get some improvements using SVM.
+			<br>
+			<br>
+			<table style="width:100%">
+			  <tr>
+			    <th>Window Size</th>
+			    <th>Accuracy</th> 
+			    <th>Precision</th>
+			    <th>Recall</th>
+			    <th>Specificity</th>
+			    <th>Fscore</th>
+			    <th>MCC</th>
+			    <th>FPR</th>
+			  </tr>
+			  <tr>
+			    <td align="center">24</td>
+			    <td align="center">0.6958</td>
+			    <td align="center">0.7162</td>
+			    <td align="center">0.6486</td>
+			    <td align="center">0.7430</td>
+			    <td align="center">0.6887</td>
+			    <td align="center">0.3934</td>
+			    <td align="center">0.2569</td>
+			  </tr>
+			</table>
+			<br>
+
+			</div>
+		</div>
+ 		<footer align="center" style="position: absolute; bottom: 0; width: 99%;">
+	 		<p style="font-family: 'Work Sans', sans-serif;"> Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/mynkpl1998">Mayank Pal</a> </p>
+		</footer>
+	</div>	
+</body>
+</html>
