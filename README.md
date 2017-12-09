@@ -2,7 +2,7 @@
 
 Paper link : https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-434
 
-Project Website Link : https://github.com/mynkpl1998/atppredict
+Project Website Link : https://mynkpl1998.github.io/atppredict/
 
 # Dependencies 
 * Python 3
