@@ -1,5 +1,8 @@
 # Improvement and Implementation of Paper 'Identification of ATP binding residues of a protein from its primary sequence'
+
 Paper link : https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-434
+
+Project Website Link : https://github.com/mynkpl1998/atppredict
 
 # Dependencies 
 * Python 3
