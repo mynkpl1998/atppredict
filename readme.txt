@@ -1,9 +1,9 @@
 
-Implementation of 'Identification of ATP binding residues of a protein from its primary sequence',
+# Implementation of 'Identification of ATP binding residues of a protein from its primary sequence',
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-434.
 
 Aditya Adhikary(2015007)
-Mayank Kumar Pal(2015147)
+Mayank Kumar Pal(2015147) 
 
 Please find our implementation at /ssd-scratch/mayank15147/MLBA_PROJECT on the HPC.
 
